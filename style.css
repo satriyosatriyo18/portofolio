@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: rgb(230, 235, 240);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,180,200,0.18), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(0,120,220,0.18), transparent 45%),
+    linear-gradient(180deg, rgb(5,10,20), rgb(2,5,15));
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(10,20,35,0.7);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(0,200,190);
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: rgb(190,200,210);
+}
+
+nav a.active,
+nav a:hover {
+  color: rgb(0,200,190);
+  border-bottom: 2px solid rgb(0,200,190);
+}
+
+/* MAIN */
+main {
+  flex: 1;
+}
+
+/* HOME */
+.home {
+  height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-logo h1 {
+  font-size: 90px;
+  letter-spacing: 6px;
+  color: rgb(0,220,200);
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+.welcome-logo p {
+  text-align: center;
+  letter-spacing: 3px;
+  color: rgb(190,210,220);
+}
+
+/* PAGE */
+.page {
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.page h1 {
+  font-size: 46px;
+  color: rgb(0,220,200);
+}
+
+.page p {
+  margin-top: 20px;
+  color: rgb(200,215,225);
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background: rgba(10,20,35,0.85);
+  color: rgb(170,185,195);
+  font-size: 14px;
+}
+
+/* ANIMATION */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(0,220,200,0.4);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(0,220,200,0.9);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0,220,200,0.4);
+  }
+}
+
+/* TEXT BOX */
+.text-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  background: rgba(15, 25, 45, 0.75);
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0, 200, 190, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+/* SPLIT HOME LAYOUT */
+.split-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+/* LEFT SIDE */
+.home-left h2 {
+  font-size: 56px;
+  color: rgb(0,220,200);
+  margin-bottom: 16px;
+}
+
+.home-left .role {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgb(190,210,220);
+}
+
+/* RIGHT SIDE (WELCOME) */
+.home-right h1 {
+  font-size: 90px;
+  letter-spacing: 6px;
+  color: rgb(0,220,200);
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+.home-right p {
+  text-align: center;
+  letter-spacing: 3px;
+  color: rgb(190,210,220);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .split-home {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+}
